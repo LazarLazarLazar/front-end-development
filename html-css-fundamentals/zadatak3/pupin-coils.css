@@ -1,0 +1,52 @@
+body {
+    width: 900px;
+    margin: 20px auto;
+    font-family: "Times New Roman", Helvetica sans-serif;
+    background-color: #f9f9f9;
+    font-size: 18px;
+  }
+
+  nav {
+    padding: 16px 0 16px 0;
+    border-top: 1px solid gray ;
+    border-bottom: 1px solid gray;
+  }
+
+  a {
+    margin-right: 6px;
+    text-decoration: none; 
+  }
+
+  p {
+    font-style: italic; 
+    text-indent: 30px;
+    line-height: 30px;
+  }
+
+  section {
+    float: left;
+    width: 500px;
+    padding: 0 8px 0 0;
+    /*border-right: 1px solid gray;*/
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  aside {
+    float: left;
+    width: 400px;
+    padding: 5em 0 0 2em;
+    box-sizing: border-box;
+  }
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 2.3em;
+}
+
+img {
+    display: block;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
