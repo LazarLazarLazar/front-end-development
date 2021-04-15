@@ -3,59 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Advanced CSS - Assignment 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 2</title>
     <style>
-        a[href^="https://www.google.com"] {
-            color: green;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            /*max-width: 960px;
+            width: 90%;
+            margin: 100px auto;*/
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+            background: #050210;
+
+        }
+
+        .circle {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation: animate 2s linear infinite;
+
         }
 
 
-        a[target="_blank"] {
-            color: red;
+
+        .circle:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 1000;
+            /*background: repeating-radial-gradient(#E8BF1C 0px, #914E67 30px);*/
+            /*background: radial-gradient(#E8BF1C 50px, #914E67 30px);*/
+            /*background: repeating-radial-gradient(#E8BF1C 0px, #914E67 10px);*/
+            /*background: radial-gradient(#36295e, #1c1045);*/
+            /*background: radial-gradient(#161616, #545357);*/
+            /*background: radial-gradient(#161616, #545357);*/
+            /*background: repeating-conic-gradient(#161616, #545357)*/
+            /*background: linear-gradient(direction, color1, color2, ...);*/
+            background: radial-gradient(#E8BF1C 0px, #914E67 150px);
         }
 
-        #second-div p:nth-child(even) {
-            color: red;
+
+        .circle:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 50%;
+            /*z-index: 1000;
+            z-index: 1;*/
+            filter: blur(30px);
         }
 
-        #second-div p:nth-child(odd) {
-            color: blue;
-        }
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
 
-        body>p:last-child:hover {
-            cursor: pointer;
-            color: blue;
-            font-style: italic;
-        }
-
-        #first-div>p::after {
-            content: "NEW";
-            color: yellow;
+            100% {
+                transform: rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Main Heading</h1>
-    <p>Paragraph 1</p>
-    <a href="https://www.google.com/">Google</a>
-    <a href="https://www.google.com/doodles">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
-    <div id="first-div">
-        <h2>Subheading</h2>
-        <p>Paragraph 2</p>
-        <p>Paragraph 3</p>
-        <div id="second-div">
-            <h3>Sub subheading</h3>
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-            <p>Paragraph 7</p>
-            <p>Paragraph 8</p>
-        </div>
-    </div>
-    <p>Paragraph 9</p>
-    <p>Paragraph 10</p>
+    <div class="circle"></div>
 </body>
 
 </html>
